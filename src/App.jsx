@@ -5,6 +5,8 @@ import Main from "./components/section/Main";
 import Navigation from "./components/section/Navigation";
 import Page from "./components/section/Page";
 import Reviews from "./components/section/Reviews";
+import Features from "./components/section/Features";
+import FAQs from "./components/section/FAQ/FAQs";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       </Header>
       <Main>
         <Logo />
+        <Features />
+        <FAQs />
       </Main>
     </Page>
   );
