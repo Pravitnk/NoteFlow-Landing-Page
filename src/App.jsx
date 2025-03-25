@@ -7,6 +7,7 @@ import Page from "./components/section/Page";
 import Reviews from "./components/section/Reviews";
 import Features from "./components/section/Features";
 import FAQs from "./components/section/FAQ/FAQs";
+import Testimonials from "./components/section/Testimonials/Testimonials";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Logo />
         <Features />
         <FAQs />
+        <Testimonials />
       </Main>
     </Page>
   );
