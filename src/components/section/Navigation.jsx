@@ -26,7 +26,10 @@ const Navigation = () => {
       </ul>
 
       <div className="flex items-center gap-x-3">
-        <button className="border-primary-50 transition-property hover:bg-primary-50 hover:text-primary-1300 cursor-pointer rounded-full border-2 px-8 py-3.5 text-lg/8 font-normal">
+        <button
+          className="border-primary-50 transition-property hover:bg-primary-50 hover:text-primary-1300 cursor-pointer rounded-full border-2 px-8 py-3.5 text-lg/8 font-normal"
+          onClick={() => setActiveModal("login")}
+        >
           Login
         </button>
 
