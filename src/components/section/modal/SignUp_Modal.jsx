@@ -27,8 +27,8 @@ const SignUp_Modal = () => {
     if (checked) {
       console.log(inputs);
       setInputs(initialState);
-
       //close the modal
+      setActiveModal("");
     }
   };
 
@@ -98,8 +98,9 @@ const SignUp_Modal = () => {
             </p>
           </div>
           <button
-            className="border-primary-500 bg-primary-500 transition-property hover:bg-primary-50 hover:border-primary-50 text-primary-1300 primary-glow primary-glow-hover w-full cursor-pointer rounded-full border-2 px-8 py-3.5 text-lg/8 font-normal"
+            className={`border-primary-500 bg-primary-500 text-primary-1300 primary-glow primary-glow-hover w-full cursor-pointer rounded-full border-2 px-8 py-3.5 text-lg/8 font-normal ${!checked ? "cursor-not-allowed opacity-50" : "transition-property hover:bg-primary-50 hover:border-primary-50"}`}
             onClick={handleSubmit}
+            disabled={!checked}
           >
             Get Started
           </button>
