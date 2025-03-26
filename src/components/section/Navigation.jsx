@@ -1,8 +1,10 @@
 import React from "react";
 import Logo from "../icons/Logo";
 import { navigationLinks } from "../../utils/content";
+import { useModalContent } from "../../context/ModalContext";
 
 const Navigation = () => {
+  const { setActiveModal } = useModalContent();
   return (
     <nav className="text-primary-50 m-auto flex max-w-[90rem] justify-between px-24 text-lg/8 font-light">
       <a href="#" className="flex items-center gap-3">
@@ -28,7 +30,10 @@ const Navigation = () => {
           Login
         </button>
 
-        <button className="border-primary-500 bg-primary-500 transition-property hover:bg-primary-50 hover:border-primary-50 text-primary-1300 primary-glow primary-glow-hover cursor-pointer rounded-full border-2 px-8 py-3.5 text-lg/8 font-normal">
+        <button
+          className="border-primary-500 bg-primary-500 transition-property hover:bg-primary-50 hover:border-primary-50 text-primary-1300 primary-glow primary-glow-hover cursor-pointer rounded-full border-2 px-8 py-3.5 text-lg/8 font-normal"
+          onClick={() => setActiveModal("sign-up")}
+        >
           Get Started
         </button>
       </div>
