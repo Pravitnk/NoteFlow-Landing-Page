@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { useModalContent } from "../../../context/ModalContext";
 
 const Modal = ({ children, modal }) => {
-  const { activeModal } = useModalContent();
+  const { activeModal, setActiveModal } = useModalContent();
   const activelyDisplayedModals = modal === activeModal;
   return (
     <motion.div
@@ -23,6 +23,7 @@ const Modal = ({ children, modal }) => {
         duration: 0.25,
         ease: "easeInOut",
       }}
+      onClick={(e) => e.currentTarget === e.target && setActiveModal("")}
     >
       <motion.div
         className="flex overflow-hidden rounded-2xl opacity-0 shadow-[opx,opx,20px,rgb(6,18,18,0.1)]"
