@@ -4,7 +4,7 @@ import { testimonials as test } from "../../../utils/content";
 import CaretUp from "../../icons/CaretUp";
 
 const Testimonials = () => {
-  const [expanded, setExpanded] = useState(true);
+  const [expanded, setExpanded] = useState(false);
   return (
     <section className="bg-gradient-to-top">
       <div className="m-auto flex max-w-[90rem] flex-col items-center px-24 py-32">
