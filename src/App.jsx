@@ -13,6 +13,7 @@ import Modal from "./components/section/modal/Modal";
 import SignUp_Modal from "./components/section/modal/SignUp_Modal";
 
 import { ModalContextProvider } from "./context/ModalContext";
+import LoginModal from "./components/section/modal/Login_Modal";
 
 function App() {
   return (
@@ -33,6 +34,10 @@ function App() {
 
         <Modal modal="sign-up">
           <SignUp_Modal />
+        </Modal>
+
+        <Modal modal="login">
+          <LoginModal />
         </Modal>
       </Page>
     </ModalContextProvider>
