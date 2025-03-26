@@ -1,12 +1,14 @@
 import { React, useState } from "react";
 import Close from "../../icons/Close";
 import Checkmark from "../../icons/Checkmark";
+import { useModalContent } from "../../../context/ModalContext";
 
 const initialState = {
   email: "",
   password: "",
 };
 const SignUp_Modal = () => {
+  const { setActiveModal } = useModalContent();
   const [checked, setChecked] = useState(false);
   const [inputs, setInputs] = useState(initialState);
   console.log(inputs);
@@ -45,7 +47,10 @@ const SignUp_Modal = () => {
 
       {/* right */}
       <div className="bg-primary-1500 flex flex-col justify-between gap-y-24 bg-[url('../src/assets/Noise.webp')] bg-repeat p-10">
-        <button className="border-primary-75 hover:bg-primary-75 group transition-property ml-auto w-fit cursor-pointer rounded-2xl border-2 p-3">
+        <button
+          className="border-primary-75 hover:bg-primary-75 group transition-property ml-auto w-fit cursor-pointer rounded-2xl border-2 p-3"
+          onClick={() => setActiveModal("")}
+        >
           <Close
             className="stroke-primary-75 group-hover:stroke-primary-1300 transition-property"
             width={3}
