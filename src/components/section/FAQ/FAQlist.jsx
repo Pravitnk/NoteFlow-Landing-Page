@@ -11,7 +11,7 @@ const FAQlist = ({
   const [inView, setInView] = useState(false);
   return (
     <motion.ul
-      className="m-auto flex max-w-[826px] flex-col gap-y-14"
+      className="m-auto flex max-w-[826px] flex-col gap-y-14 max-lg:gap-y-12"
       initial="hidden"
       animate={inView ? "visible" : "hidden"}
       key={category}
