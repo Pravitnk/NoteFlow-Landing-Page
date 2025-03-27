@@ -23,8 +23,8 @@ const FAQs = () => {
 
   return (
     <section className="bg-gradient-to-bottom justify-items-center">
-      <div className="w-full max-w-[90%] py-32">
-        <h2 className="text-primary-50 mb-8 text-center text-6xl/18 font-semibold tracking-tight">
+      <div className="w-full max-w-[90%] py-32 max-xl:px-16 max-xl:py-24">
+        <h2 className="text-primary-50 mb-8 text-center text-6xl/18 font-semibold tracking-tight max-xl:mb-6 max-xl:text-5xl/16">
           Frequently Asked Questions
         </h2>
         <div className="mb-8 text-xl/loose font-light">
@@ -42,7 +42,7 @@ const FAQs = () => {
             <li key={categ.id}>
               <button
                 onClick={() => handleCategoryClick(categ.category)}
-                className={`border-primary-50 text-primary-50 transition-property cursor-pointer rounded-full border-2 px-8 py-3.5 text-lg/8 ${categ.category === category && "bg-primary-500 text-primary-1300 border-primary-500 primary-glow"} ${categ.category !== category && "hover:bg-primary-50 hover:text-primary-1300"}`}
+                className={`border-primary-50 text-primary-50 transition-property cursor-pointer rounded-full border-2 px-8 py-3.5 text-lg/8 max-xl:px-6 max-xl:py-3 max-xl:text-base/loose ${categ.category === category && "bg-primary-500 text-primary-1300 border-primary-500 primary-glow"} ${categ.category !== category && "hover:bg-primary-50 hover:text-primary-1300"}`}
               >
                 {categ.category}
               </button>

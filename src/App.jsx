@@ -14,33 +14,39 @@ import SignUp_Modal from "./components/section/modal/SignUp_Modal";
 
 import { ModalContextProvider } from "./context/ModalContext";
 import LoginModal from "./components/section/modal/Login_Modal";
+import MobileMenu from "./components/section/mobileMenu/MobileMenu";
+import { MobileMenuContextProvider } from "./context/MobileMenuContext";
 
 function App() {
   return (
-    <ModalContextProvider>
-      <Page>
-        <Header>
-          <Navigation />
-          <Hero />
-          <Reviews />
-        </Header>
-        <Main>
-          <Logo />
-          <Features />
-          <FAQs />
-          <Testimonials />
-        </Main>
-        <Footer />
+    <MobileMenuContextProvider>
+      <ModalContextProvider>
+        <Page>
+          <Header>
+            <Navigation />
+            <Hero />
+            <Reviews />
+          </Header>
+          <Main>
+            <Logo />
+            <Features />
+            <FAQs />
+            <Testimonials />
+          </Main>
+          <Footer />
 
-        <Modal modal="sign-up">
-          <SignUp_Modal />
-        </Modal>
+          <Modal modal="sign-up">
+            <SignUp_Modal />
+          </Modal>
 
-        <Modal modal="login">
-          <LoginModal />
-        </Modal>
-      </Page>
-    </ModalContextProvider>
+          <Modal modal="login">
+            <LoginModal />
+          </Modal>
+
+          <MobileMenu />
+        </Page>
+      </ModalContextProvider>
+    </MobileMenuContextProvider>
   );
 }
 
