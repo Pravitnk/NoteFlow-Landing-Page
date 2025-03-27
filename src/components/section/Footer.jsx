@@ -5,7 +5,7 @@ import Logo from "../icons/Logo";
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-bottom">
-      <div className="m-auto flex max-w-[90rem] justify-between px-24 py-32 max-xl:px-16 max-xl:py-24 max-lg:grid max-lg:gap-y-18 max-lg:px-8">
+      <div className="m-auto flex max-w-[90rem] justify-between px-24 py-32 max-xl:px-16 max-xl:py-24 max-lg:grid max-lg:gap-y-18 max-lg:px-8 max-sm:pb-16">
         {/* left  */}
         <div className="">
           <a href="#" className="flex items-center gap-x-3">

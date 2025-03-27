@@ -27,9 +27,9 @@ const LoginModal = () => {
     setActiveModal("");
   };
   return (
-    <section className="grid max-w-3xl grid-cols-2">
+    <section className="grid max-w-3xl grid-cols-2 max-sm:grid-cols-1">
       {/* left  */}
-      <div className="bg-primary-1300 flex flex-col justify-center gap-y-4 bg-[url('../src/assets/Noise.webp')] bg-repeat p-10 text-center max-md:px-6 max-md:py-8">
+      <div className="bg-primary-1300 flex flex-col justify-center gap-y-4 bg-[url('../src/assets/Noise.webp')] bg-repeat p-10 text-center max-md:px-6 max-md:py-8 max-sm:hidden">
         <h4 className="text-primary-50 text-4xl/12 font-bold tracking-tight">
           Welcome Back! <br />
           Log In to Continue
@@ -40,7 +40,7 @@ const LoginModal = () => {
       </div>
 
       {/* right */}
-      <div className="bg-primary-1500 flex flex-col justify-between gap-y-24 bg-[url('../src/assets/Noise.webp')] bg-repeat p-10 max-md:px-6 max-md:py-8">
+      <div className="bg-primary-1500 flex flex-col justify-between gap-y-24 bg-[url('../src/assets/Noise.webp')] bg-repeat p-10 max-md:px-6 max-md:py-8 max-sm:gap-y-16">
         <button
           className="border-primary-75 hover:bg-primary-75 group transition-property ml-auto w-fit cursor-pointer rounded-2xl border-2 p-3"
           onClick={() => setActiveModal("")}
@@ -55,7 +55,7 @@ const LoginModal = () => {
           <label>
             Email{" "}
             <input
-              className="bg-primary-75 placeholder-primary-1300 text-primary-1500 placeholder-opacity-20 mt-2 block w-full rounded-full px-8 py-4 font-normal placeholder:text-base placeholder:font-light max-md:px-6 max-md:py-3"
+              className="bg-primary-75 placeholder-primary-1300 text-primary-1500 placeholder-opacity-20 mt-2 block w-full rounded-full px-8 py-4 font-normal placeholder:text-base placeholder:font-light max-md:px-6 max-md:py-3 max-sm:px-5 max-sm:py-2.5"
               name="email"
               type="email"
               placeholder="xyz@gmail.com"
@@ -67,7 +67,7 @@ const LoginModal = () => {
           <label>
             Password{" "}
             <input
-              className="bg-primary-75 placeholder-primary-1300 text-primary-1500 placeholder-opacity-20 mt-2 block w-full rounded-full px-8 py-4 font-normal placeholder:text-base placeholder:font-light max-md:px-6 max-md:py-3"
+              className="bg-primary-75 placeholder-primary-1300 text-primary-1500 placeholder-opacity-20 mt-2 block w-full rounded-full px-8 py-4 font-normal placeholder:text-base placeholder:font-light max-md:px-6 max-md:py-3 max-sm:px-5 max-sm:py-2.5"
               name="password"
               type="password"
               placeholder="Password"
@@ -77,7 +77,7 @@ const LoginModal = () => {
           </label>
         </div>
 
-        <div>
+        <div className="max-sm:mb-3">
           <button
             className={`border-primary-500 bg-primary-500 text-primary-1300 primary-glow primary-glow-hover transition-property hover:bg-primary-50 hover:border-primary-50 w-full cursor-pointer rounded-full border-2 px-8 py-3.5 text-lg/8 font-normal max-md:px-6 max-md:py-3 max-md:text-base/loose`}
             onClick={handleSubmit}

@@ -12,7 +12,7 @@ const Testimonials = () => {
           <p className="primary-glow text-primary-1300 bg-primary-500 w-min rounded-full px-4 py-2 text-base/8 max-lg:mb-8">
             Testimonials
           </p>
-          <h2 className="text-primary-50 text-center text-6xl/18 font-semibold tracking-tight max-xl:text-5xl/16 max-lg:mb-4 max-lg:text-4xl/10">
+          <h2 className="text-primary-50 max-sm:tra text-center text-6xl/18 font-semibold tracking-tight max-xl:text-5xl/16 max-lg:mb-4 max-lg:text-4xl/10 max-sm:text-3xl/9">
             What our AI-powered <br />
             notetakers have to say
           </h2>
@@ -22,7 +22,7 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="mb-20 grid grid-cols-3 gap-x-6 max-xl:gap-x-4 max-lg:mb-18 max-lg:grid-cols-2">
+        <div className="mb-20 grid grid-cols-3 gap-x-6 max-xl:gap-x-4 max-lg:mb-18 max-lg:grid-cols-2 max-sm:grid-cols-1">
           <TestimonialList testimonials={test.slice(0, expanded ? 5 : 2)} />
           <TestimonialList testimonials={test.slice(5, expanded ? 10 : 7)} />
           <TestimonialList

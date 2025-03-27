@@ -32,9 +32,9 @@ const SignUp_Modal = () => {
   };
 
   return (
-    <section className="grid max-w-3xl grid-cols-2">
+    <section className="grid max-w-3xl grid-cols-2 max-sm:w-96 max-sm:grid-cols-1">
       {/* left  */}
-      <div className="bg-primary-1300 flex flex-col justify-center gap-y-4 bg-[url('../src/assets/Noise.webp')] bg-repeat p-10 text-center max-md:px-6 max-md:py-8">
+      <div className="bg-primary-1300 max-sm: flex flex-col justify-center gap-y-4 bg-[url('../src/assets/Noise.webp')] bg-repeat p-10 text-center max-md:px-6 max-md:py-8 max-sm:hidden">
         <h4 className="text-primary-50 text-4xl/12 font-bold tracking-tight">
           Lets Get You <br />
           Signed Up
@@ -45,7 +45,7 @@ const SignUp_Modal = () => {
       </div>
 
       {/* right */}
-      <div className="bg-primary-1500 flex flex-col justify-between gap-y-24 bg-[url('../src/assets/Noise.webp')] bg-repeat p-10 max-md:px-6 max-md:py-8">
+      <div className="bg-primary-1500 flex flex-col justify-between gap-y-24 bg-[url('../src/assets/Noise.webp')] bg-repeat p-10 max-md:px-6 max-md:py-8 max-sm:gap-y-16">
         <button
           className="border-primary-75 hover:bg-primary-75 group transition-property ml-auto w-fit cursor-pointer rounded-2xl border-2 p-3"
           onClick={() => setActiveModal("")}
@@ -60,7 +60,7 @@ const SignUp_Modal = () => {
           <label>
             Email{" "}
             <input
-              className="bg-primary-75 placeholder-primary-1300 text-primary-1500 placeholder-opacity-20 mt-2 block w-full rounded-full px-8 py-4 font-normal placeholder:text-base placeholder:font-light max-md:px-6 max-md:py-3"
+              className="bg-primary-75 placeholder-primary-1300 text-primary-1500 placeholder-opacity-20 mt-2 block w-full rounded-full px-8 py-4 font-normal placeholder:text-base placeholder:font-light max-md:px-6 max-md:py-3 max-sm:px-5 max-sm:py-2.5"
               name="email"
               type="email"
               placeholder="xyz@gmail.com"
@@ -72,7 +72,7 @@ const SignUp_Modal = () => {
           <label>
             Password{" "}
             <input
-              className="bg-primary-75 placeholder-primary-1300 text-primary-1500 placeholder-opacity-20 mt-2 block w-full rounded-full px-8 py-4 font-normal placeholder:text-base placeholder:font-light max-md:px-6 max-md:py-3"
+              className="bg-primary-75 placeholder-primary-1300 text-primary-1500 placeholder-opacity-20 mt-2 block w-full rounded-full px-8 py-4 font-normal placeholder:text-base placeholder:font-light max-md:px-6 max-md:py-3 max-sm:px-5 max-sm:py-2.5"
               name="password"
               type="password"
               placeholder="Password"
@@ -85,7 +85,7 @@ const SignUp_Modal = () => {
         <div>
           <div
             onClick={() => setChecked((prev) => !prev)}
-            className="m-auto mb-4 w-fit cursor-pointer gap-x-2"
+            className="m-auto mb-4 w-fit cursor-pointer gap-x-2 max-sm:mb-3"
           >
             <button
               className={`border-primary-100 transition-property mr-2 inline-flex h-4 w-4 cursor-pointer items-center justify-center rounded-sm border-2 ${checked && "bg-primary-100"} `}
