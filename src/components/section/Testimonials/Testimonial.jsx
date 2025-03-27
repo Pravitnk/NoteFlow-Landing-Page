@@ -4,7 +4,7 @@ import Star from "../../icons/Star";
 const Testimonial = ({ test }) => {
   return (
     <motion.li
-      className="bg-primary-1300 rounded-2xl px-8 py-10 max-xl:px-6"
+      className="bg-primary-1300 rounded-2xl px-8 py-10 max-xl:px-6 max-md:py-8"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false, amount: "100%" }}
@@ -12,7 +12,7 @@ const Testimonial = ({ test }) => {
         opacity: { duration: 0.75, ease: "easeInOut" },
       }}
     >
-      <div className="flex gap-x-1 pb-8">
+      <div className="flex gap-x-1 pb-8 max-md:pb-6">
         {Array.from({ length: test.rating }).map((_, index) => (
           <Star
             className="fill-primary-100"
@@ -27,7 +27,7 @@ const Testimonial = ({ test }) => {
         ))}
       </div>
 
-      <p className="text-primary-50 pb-16 text-lg/loose font-light max-xl:text-base/loose">
+      <p className="text-primary-50 pb-16 text-lg/loose font-light max-xl:text-base/loose max-md:pb-12">
         {test.description}
       </p>
       <div className="flex items-center gap-x-6 max-xl:gap-x-4">
