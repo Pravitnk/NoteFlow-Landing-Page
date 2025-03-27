@@ -11,7 +11,6 @@ const SignUp_Modal = () => {
   const { setActiveModal } = useModalContent();
   const [checked, setChecked] = useState(false);
   const [inputs, setInputs] = useState(initialState);
-  console.log(inputs);
 
   const handleInputs = (e) => {
     setInputs((prev) => {

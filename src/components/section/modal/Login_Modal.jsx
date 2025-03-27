@@ -9,7 +9,6 @@ const initialState = {
 const LoginModal = () => {
   const { setActiveModal } = useModalContent();
   const [inputs, setInputs] = useState(initialState);
-  console.log(inputs);
 
   const handleInputs = (e) => {
     setInputs((prev) => {
